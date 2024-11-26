@@ -34,3 +34,9 @@ fit2 <- optim(par = init, fn = nll_lm, data = df, method="L-BFGS-B",
               hessian = TRUE)
 sd <- sqrt(diag(solve(fit2$hessian)))
 sd[1:4]
+
+
+#Ex4
+fit_ex4 <- lm(y ~ x1 + x2 + x3, data = df)
+summary(fit_ex4)
+fit_ex4$coefficients
